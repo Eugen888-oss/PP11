@@ -91,9 +91,13 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **How do you link `prev` and `next` pointers correctly using a static array?**
-2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
-3. **How would you extend this static list to include additional data fields?**
+For the prev and next link, I need to create two additional pointers for each element of the array. This does not apply to the first and last elements. One to the next element, "next," and one to the previous element, "prev." This is a variable DNode with three arrays.
 
+2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
+The Compile-time allocation is more simple and quick to apply, and it the risk is lover for errors. Dynamic alocation is flexible and allows you to create structures with all dimensions. But it is also more difficult to program.
+
+3. **How would you extend this static list to include additional data fields?**
+For example with adding fieldto the DNode. Example: char *label;
 ---
 
 ### Task 2: Interactive Singly Linked List
@@ -159,9 +163,12 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **Why is `malloc` necessary when adding nodes dynamically?**
+   When you  ádding dynamically, you don't know how many nodes are needed, malloc allocates memory at runtime, so you dont need to know it.
 2. **How can you traverse the list to print each node’s address and value?**
+For example with a loop.
+   
 3. **What are the consequences of not freeing the list before exit?**
-
+   In this case the memory is not returned, the program uses unnecessary memory, what ist desidet bevore.
 ---
 
 ### Task 3: JSON Array to Linked List
@@ -244,7 +251,9 @@ gcc -o solutions/json_main solutions/json_main.c solutions/json_list.o -ljansson
 #### Reflection Questions
 
 1. **How does using `getopt` make the program more flexible than `argv[1]`?**
+   With getopt you can make the input clearer and more flexible.
 2. **What happens if the user omits the `-i` option?**
+   I can´t find the -i option
 3. **How can you validate that the JSON file loaded is indeed an array?**
 
 ---
